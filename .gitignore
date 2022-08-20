@@ -1,0 +1,8 @@
+/app/node_modules/
+/app/.parcel-cache/
+/app/dist/
+/app/yarn.lock
+/app/parcel_app/src/api.json
+/app/test_py
+/app/parcel_app_new/config.js
+/app/SERVER/nodejs-express-mysql/app/config/db.config.js

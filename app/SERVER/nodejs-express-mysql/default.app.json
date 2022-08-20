@@ -1,0 +1,41 @@
+{
+    "rent_status" : 1 , 
+    "current_user" : "E94081107",
+    "user_id_list" : {
+
+    } , 
+    "user_data_json" : {
+        "E94081107" : { "NCKU_login" : "jefferS…."  ,                          
+                        "user_name" : "Jeff" ,                           
+                        "user_level" : "55" ,                                                   
+                        "user_motto" : "Hi im Jeff , EE major , i'm a hakka man. Stay stingy is my motto" , 
+                        "user_experience" : "經驗值" ,                                          
+                        "user_rent_status" : 1 ,                        
+                        "user_jpg_name1" : "head1.jpg" ,                        
+                        "user_jpg_name2" : "body2.jpg" ,                        
+                        "user_gif_name" : "demo1.gif" 
+        } , 
+        "E94081106": {
+            "NCKU_login": "jefferS….",
+            "user_name": "Jeff",
+            "user_level": "11",
+            "user_motto": "Hi im Jehn , EE major , i'm a hakka man. Stay stingy is my motto",
+            "user_experience": "經驗值",
+            "user_rent_status": 1,
+            "user_jpg_name1": "head1.jpg",
+            "user_jpg_name2": "body2.jpg",
+            "user_gif_name": "demo1.gif"
+        } , 
+        "E94081105": {
+            "NCKU_login": "jefferS….",
+            "user_name": "Jeff",
+            "user_level": "3",
+            "user_motto": "Hi im Nancy , EE major , i'm a hakka man. Stay stingy is my motto",
+            "user_experience": "經驗值",
+            "user_rent_status": 1,
+            "user_jpg_name1": "head1.jpg",
+            "user_jpg_name2": "body2.jpg",
+            "user_gif_name": "demo1.gif"
+        }
+    }
+}

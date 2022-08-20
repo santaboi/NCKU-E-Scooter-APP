@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<!--https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/dist/parcel_app_new/leaderboard.html-->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./leaderboard.sass">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>LeaderBoard</title>
+</head> 
+<body>
+    <div id="preloader">
+        <h1 id="NCKU_header">LeaderBoard</h1>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">User information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="modal_user_name">User Name : <span class ="modal_text" id="modal_user_name_chg">Jeff</span></h2>
+                    <h2 id="modal_user_level" >Level : <span class ="modal_text"id="modal_user_name_chg">14</span></h2>
+                    <h2 id="modal_user_reputation">Reputation : <span class ="modal_text"id="modal_user_name_chg">666</span></h2>
+                    <h3 id="modal_user_motto">Motto : <br><span class ="modal_text"id="modal_user_name_chg">hi this is jeff. i'm a hakka dawg</span></h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id ="background"></div>
+    <div class = "leader_group">
+        <div id = "leader_container">
+            <div class = "leader_bar"   id ="first"></div>
+            <div class = "leader_bar"   id="second"></div>
+            <div class = "leader_bar"   id="third"></div>
+
+            <div class="leader_img" id="first_img"></div>
+            <div class="leader_img" id="second_img"></div>
+            <div class="leader_img" id="third_img"></div>
+        </div>
+    </div>
+    <a  id = "level_info" tabindex="0" class="btn  btn-info" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+        title="About Leaderboard"
+        data-bs-content="click each row for more information about each E_Scooter Master">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill"
+            viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z">
+            </path>
+        </svg>
+    </a>
+    <div id="buttonrow">
+        <a id="main_back_btn" type="button" class="btn btn-info"
+            href="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/dist/parcel_app_new/app.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z">
+                </path>
+            </svg>
+        </a>
+    </div>
+    <ol id ="main_board" class="list-group ">
+        <li id = "your_row" class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">4th</div>
+                this is u 
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">1st</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">2nd</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">3rd</div>
+                Jeff
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">4th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">5th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">6th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">7th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">8th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">9th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">10th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">11th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class = "board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">12th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">13th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">14th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">15th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">16th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">17th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">18th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">19th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="board_img">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>
+            </div>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">20th</div>
+                UserName(from SQL)
+            </div>
+            <span class="badge bg-info rounded-pill">level 14</span>
+        </li>
+    </ol>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
+</body>
+<script src="l_preload.js"></script>
+</html>

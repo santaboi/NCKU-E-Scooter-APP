@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- https://www.pinterest.com/pin/72409506508670319/ -->
+<!-- http://thepatternlibrary.com/#magnus-2051 -->
+<!--url : https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/dist/parcel_app_new/app.html-->
+<html>
+<head>
+    <title>NCKU E-Scooter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./app.sass">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.2.1/html5-qrcode.min.js"></script>
+    <script type="module" src="index.js"></script>
+</head>
+
+<body onload="ShowTime()">
+    <div id="countdown_box">
+        <div id="countdown_container">
+            <h1 id="scooter_id"><span id="scooter_id_text">B1-0<span class="car_id_class"id="random_car_id">11</span></span></h1>
+            <section id="scooter_img"></section>
+            <button id="scooter_dl_btn"type="button" class="btn btn-danger">Delete</button>
+            <h3 id="text_box">
+                <span id ="text_box_1">電機系館站</span> to <span id="text_box_2">工設系館站</span>
+                <br>
+                Battery : <span class = "car_battery_class"id ="text_box_3">80</span>%
+                <br>
+                <span id="time_show">10:00</span>
+            </h2>
+            
+        </div>
+    </div>
+    <div id="safety_info">
+        <div id="main_info">
+            <div id="safery_btns" class="btn-group" role="group" aria-label="Basic example">
+                <button id="safety_confirm"type="button" class="btn btn-info">Confirm</button>
+                <button id="safety_close"type="button" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+    <div id="preloader">
+        <h1 id="NCKU_header">NCKU<br>E SCOOTER</h1>
+    </div>
+    <div id = "system_banner">
+        <div id = 'scroll_group'>
+            <a id ="banner_btn1" href="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/spin_wheel/daily.html" class="btn btn-primary active" aria-current="page">Daily Sign in</a>
+            <a id ="banner_btn2" href=# class="btn btn-primary active" aria-current="page">Prebooking</a>
+            <a id ="banner_btn3" href="./chracter_main.html" class="btn btn-primary active" aria-current="page">Character</a>
+            <a id ="banner_btn4" href="./leaderboard.html" class="btn btn-primary active" aria-current="page">Leaderboard</a>
+            <a id ="banner_btn5" href="./mission.html" class="btn btn-primary active" aria-current="page">Mission</a>
+        </div>
+
+    </div>
+    <div class="row" id="navbar_row"><button id="nav_toggle_button" type="button">
+            <svg id = "nav_icon"xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-down-square-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z">
+                </path>
+            </svg>
+        </button>
+        <div id = "nav_toggle" class="form-check form-switch">
+            <input id = "nav_toggle_btn"class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Banner</label>
+        </div>
+    </div>
+    <div class="container" id="main_block">
+        <div class="row" id="main_row">
+            <!--#side_bar.d-flex.flex-column.flex-shrink-0.p-3.bg-light(style='width: 280px;')-->
+            <div class="column" id="side_bar">
+                <span class="fs-4"> Jeff , Welcome! </span>
+                <br>
+                <hr id="seperate_user">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item"><a class="nav-link active" href="./app.html" aria-current="page">
+                        <img class="rounded-circle me-2"
+                            src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/home_icon.png" alt=""
+                            width="24" height="24">
+                        Home</a></li>
+                    <li><a class="nav-link link-dark"
+                            href="./chracter_main.html"><img class="rounded-circle me-2"
+                                src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/character_icon.png" alt=""
+                                width="24" height="24"> Character </a></li>
+                    <li><a class="nav-link link-dark" href="course.html"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/booking_icon.png" alt=""
+                        width="24" height="24"> Course Table</a></li>
+                    <li><a class="nav-link link-dark" href="leaderboard.html"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/leader_icon.png" alt=""
+                        width="24" height="24">Leaderboard </a></li>
+                    <li><a class="nav-link link-dark" href="#"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/scooter_icon.png" alt=""
+                        width="24" height="24">Find Scooter</a></li>
+                    <li><a class="nav-link link-dark"
+                            href="mission.html"><img class="rounded-circle me-2"
+                                src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/mission_icon.png" alt=""
+                                width="24" height="24">Mission</a></li>
+                </ul><!--https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/spin_wheel/daily.html-->
+                <hr>
+                <div class="dropdown">
+                    <a
+                        class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser2" href="./login.html" data-bs-toggle="dropdown" aria-expanded="false"><img
+                            class="rounded-circle me-2" src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/human_icon.png" alt="" width="32"
+                            height="32"><strong id = "nav_username">Jeff</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column" id="map"></div>
+        </div>
+    <div class="main_character_cls" id="main_character"> <!--autoplay muted loop  wmode="transparent"-->
+        <!--<img src="./source/main_character.png" class="character" />
+        <img src="./source/costume_character.png" class="character" />
+        <img src="./source/christmax_chatacter.jpg" class="character" />-->
+    </div>
+    <div id="main_scooter"></div>
+        <!--<video controls="" autoplay="autoplay" loop="loop" muted="muted" >
+            <source src="./source/blink_christmas.mp4" type="video/mp4">
+        </video>-->
+    </div><!-- p Try scrolling the rest of the page to see this option in action.-->
+    <div id="reader"></div>
+    <!--#top-->
+    <div id="main-scan"></div>
+    <div id="scan">
+        <div id="scan-content">Please Scan the QR code<br>on the scooter</div>
+        <div id="scan-scooter"></div>
+    </div><button class="btn btn-danger" id="stop-scan" type="button">stop scanning</button>
+    <div id="background-pop">
+        <div id="div-pop">
+            <div class="div-top"><i class="bi bi-caret-down-fill" id="close-button" style="font-size:25px;"></i></div>
+            <div class="div-content">
+                <button id="car_rent_btn" type="button" class="btn btn-info">預留車輛</button>
+                <div id="showbox1"></div>
+                <div id="start-pop">起始站點：</div>
+                <div id="end-pop">目標站點：</div>
+            </div><!--<img id="scan-icon" src="./source/shortcut_scanbutton-08.png" height="80px">-->
+            <button id="scan-icon" type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-qr-code"
+                    viewBox="0 0 16 16">
+                    <path d="M2 2h2v2H2V2Z"></path>
+                    <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"></path>
+                    <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"></path>
+                    <path
+                        d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z">
+                    </path>
+                    <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="success">
+            <div id="success-content">Success <img id="check_mark" src="./source/scan_success_icon-10.png">
+                <div id="showbox"></div>車號: B1-0<span class="car_id_class"></span><br>
+                <div id="start">起始站點：</div>
+                <div id="end">目標站點：</div>
+            </div>
+            <div id="pay">Confirm</div>
+        </div>
+        <div id="fail">
+            <div id="fail-content">Unsuccess <img id="error_mark"
+                    src="./source/scan_fail_icon-10.png"><br>掃描失敗<br>請重新嘗試!<br>車號：B1-0<span class="car_id_class"></span><br></div>
+            <div id="rescan">ReScan</div>
+        </div>
+        <div id="info">
+            <div id="info-content">車號 : B1-0<span class="car_id_class"></span><br>電量 :<span class="car_battery_class"></span>%<br>可行駛距離 : 25.3KM</div><img id="return"
+                src="./source/return_logo-10.png">
+        </div>
+        <div id="time"><img id="time-background" src="./source/time-13.png"><span id="check-time">00:00</span></div>
+    </div>
+    <script src="./app.js" type="text/javascript"></script>
+    <script src="preload.js"></script>
+    <script src="app_click.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu-BASkqxhAYMOVu25daGmDr5_na6IAW4&callback=initMap&v=weekly"
+        defer></script>
+</body>
+<!--<script type="module" src="image2.js"></script>-->
+</html>

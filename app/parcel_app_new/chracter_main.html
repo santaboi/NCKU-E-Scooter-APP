@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>chracter</title>
+
+
+    <link href="./chracter_main.sass" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!--<style>
+        #reference {
+            /*background: url('./res/exercise.png') no-repeat top / contain;*/
+            bottom: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 40vw;
+        }
+    </style>-->
+
+</head>
+
+<body>
+    <div id="preloader">
+        <h1 id="NCKU_header">Character</h1>
+    </div>
+    <!--nav-->
+    <div class="row" id="navbar_row"><button id="nav_toggle_button" type="button" class="">
+            <svg id="nav_icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                class="bi bi-caret-down-square-fill" viewBox="0 0 16 16">
+                <path
+                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z">
+                </path>
+            </svg>
+        </button>
+    </div>
+    <div class="column" id="side_bar" style="display: block;">
+        <span class="fs-4"> Jeff , Welcome! </span>
+        <br>
+        <hr id="seperate_user">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">
+                    <img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/home_icon.png"
+                        alt="" width="24" height="24">
+                    Home</a></li>
+            <li><a class="nav-link link-dark" href="chracter_main.html"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/character_icon.png"
+                        alt="" width="24" height="24"> Character </a></li>
+            <li><a class="nav-link link-dark" href="course.html"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/booking_icon.png"
+                        alt="" width="24" height="24"> Course Table</a></li>
+            <li><a class="nav-link link-dark" href="leaderboard.html"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/leader_icon.png"
+                        alt="" width="24" height="24">Leaderboard </a></li>
+            <li><a class="nav-link link-dark" href="#"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/scooter_icon.png"
+                        alt="" width="24" height="24">Find Scooter</a></li>
+            <li><a class="nav-link link-dark" href="mission.html"><img class="rounded-circle me-2"
+                        src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/mission_icon.png"
+                        alt="" width="24" height="24">Mission</a></li>
+        </ul>
+        <!--https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/spin_wheel/daily.html-->
+        <hr>
+        <div class="dropdown">
+            <a class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                href="login.html" data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-circle me-2"
+                    src="https://luffy.ee.ncku.edu.tw/~santaboi/NCKU-E_scooter-app/parcel_app_new/source/human_icon.png"
+                    alt="" width="32" height="32"><strong id="nav_username">Jeff</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--nav-->
+
+
+
+    <div id="chracter_box">
+        <div id="chracter_container">
+            <div id="head"></div>
+            <div id="body"></div>
+            <div id="cloth"></div>
+        </div>
+    </div>
+    <a id="homeicon" href="./app.html"></a>
+    <div id="bike"></div>
+    <a id="wardrobe" href="./character_change.html"></a>
+    <div id="shadow2"></div>
+    <div id="xpbar"class="progress">
+        <div id="xpbar_bar"class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100" ></div>
+    </div>
+    <div id="username">
+        <!--<font color="blue">Username</font>-->
+        <h1 id="username_texts">Jeff</h1>
+    </div>
+    <h2 id = "xp"><span id="current_xp">890</span> / <span id="current_level_xp">1440</span></h2>
+    <div id="level">
+        <h1 id="level_texts">Level <span id="change_level">19</span></h1>
+    </div>
+    <div id="line">
+        <font color="gray">
+            _______________&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_______________
+        </font>
+    </div>
+    <div id="history">
+        <font color="gray">History</font>
+    </div>
+    <div id="histitle">
+        <!--<font color="darkblue">Hour of usage<br>Starting date</font>-->
+        <span>本月騎乘時數</span>
+        <br>
+        <span>名聲</span>
+        <br>
+        <span>創立日期</span>
+    </div>
+    <div id="hisstate">
+        <!--<font color="blue">2 hours<br>2022/4/28</font>-->
+        <span>2 hours</span>
+        <br>
+        <span>35</span>
+        <br>
+        <span>2022/4/28</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src='./character_main.js'></script>
+    <script src="./m_preload.js"></script>
+</body>
+</html>

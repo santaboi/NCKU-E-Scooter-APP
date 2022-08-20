@@ -1,0 +1,288 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Abous Us
+  link(href='https://i.imgur.com/plNNHCz.png' rel='shortcut icon')
+  link(rel="stylesheet",type="text/css",href="./about_us.sass")
+  //link(href='about_us.sass' rel='stylesheet')
+  //link(href='about_us.css' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+  //link(rel='stylesheet' type='text/css' href='semantic/dist/semantic.min.css')
+  link(href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css' rel='stylesheet' type='text/css')
+  link(href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&family=Source+Code+Pro:wght@900&display=swap' rel='stylesheet')
+// navbar------------------------------------------------------------------------------------------------------------------
+// may add popup effect :https://semantic-ui.com/modules/popup.html#/examples
+.ui.top.fixed.inverted.secondary.menu
+  .item
+    img#dog_icon(src='https://i.imgur.com/plNNHCz.png')
+  a#home.ui.inverted.primary.button Home
+  a#about_us.ui.inverted.primary.button About Us
+  .pink.right.menu
+    a#github_icon.item(href='https://github.com/santaboi/NCKU_E_Scooter')
+      i.pink.big.github.icon
+    a#app.ui.inverted.blue.button Download
+    #nav_drop_down.ui.simple.dropdown.item
+      | About EScooter 
+      i.dropdown.icon
+      .ui.menu
+        // 跳轉要改一下
+        | &gt;
+        a#avatar.item Avatar
+        a#booking.item Pre-Booking
+        a#leaderboard.item LeaderBoard
+        a#location.item Scooter Location
+        a#statistical.item Statistical Forcasting
+        a#bonus.item Earn Bonus Time
+// navbar------------------------------------------------------------------------------------------------------------------
+#fullpage
+  #section1.section
+    // https://semantic-ui.com/modules/transition.html--type writter effect
+    #p1_title.ui.huge.header
+      span Talented Team from NCKU
+    // type writer : https://css-tricks.com/snippets/css/typewriter-effect/
+    p.line-1.anim-typewriter NCKU Sharing Scooter APP
+    #main_image
+  #section2.section
+    h1 OUR TEAM
+    // memeber cards----------------------------------------------------------------------------
+    // https://semantic-ui.com/views/card.html#cards
+    .ui.link.cards(data-aos='zoom-out-up' data-aos-duration='800')
+      .card
+        // for second hidden img to show (height width will collapse)
+        .image
+          img(src='./source/img/01-01-01.png')
+        .content
+          .header &#x8303;&#x59DC;&#x63DA;
+          .meta
+            a Teamleader
+          .description
+            | This is Jeff ! Currently 3rd graded , bachelor&apos;s degree, study in NCKU Electrical Engineering.I&apos;m the Teamleader of this project , we&apos;ve collaborated with start-up &amp; designer trying to create an unearth Sharing Scooter app exclusively for Students from NCKU.
+        .extra.content
+          span.right.floated
+            | Joined in 2022
+          span
+            i.user.icon
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Engineer
+      .card
+        .image
+          img(src='./source/img/04-01-01.png')
+        .content
+          .header &#x5F35;&#x7D0B;&#x6148;
+          .meta
+            span.date Teammate
+          .description
+            | I am Chang, Wen-Tzu (Joko), an Electrical Engineering student from NCKU. Machine Learning and Web design are my strengths.
+        .extra.content
+          span.right.floated
+            | Joined in 2022
+          span
+            i.user.icon
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Engineer
+      .card
+        .image
+          img(src='./source/img/02-01-01.png')
+        .content
+          .header &#x6C88;&#x4FCA;&#x7DAD;
+          .meta
+            a Teammate
+          .description
+            | Hi! I am Shen Chun-Wei, a student at NCKU studying Electrical Engineering. I am currently learning about machine learning and web design.
+        .extra.content
+          span.right.floated
+            | Joined in 2022
+          span
+            i.user.icon
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Engineer
+      .card
+        .image
+          img(src='./source/img/03-01-01.png')
+        .content
+          .header &#x694A;&#x4E1E;&#x52DB;
+          .meta
+            a Teammate
+          .description
+            | Hello~I am Yang Cheng-Syun, a student studying Electrical Engineering at NCKU.I am trying to learn programming of web design.
+        .extra.content
+          span.right.floated
+            | Joined in 2022
+          span
+            i.user.icon
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Engineer
+      .card
+        .image
+          img(src='./source/img/05-01-01.png')
+        .content
+          .header &#x99AC;&#x6620;&#x854E;
+          .meta
+            a Teammate
+          .description
+            | Hello! I am  Ma ying kiu, Christine, a Master student on industrial design from National Cheng Kung University.  I can work with design software like PS, AI and indesign.
+        .extra.content
+          span.right.floated
+            | Joined in 2022
+          span
+            i.user.icon
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Designer
+    // memeber cards----------------------------------------------------------------------------
+  // page 3 start
+  #section3.section
+    // <p class="page3">page3</p>
+    #p3_inner_blk.ui.middle.aligned.three.column.grid
+      // vertically padded not taking effect??
+      #app_topic.sixteen.wide.column(data-aos='zoom-out')
+        h1.ui.grey.header
+          | NCKU Sharing Scooter
+      .three.column.row
+        #app_col11.column(data-aos='fade-down')
+          i.huge.grey.user.circle.icon
+          h1.ui.header Avatar
+          p
+            | In E-Scooter, everyone can customize their intelligent virtual avatar. Users can not only decide avatars&apos; genders and colors but also dress them up.
+        #app_col12.column(data-aos='fade-down')
+          i.huge.grey.calendar.alternate.icon
+          h1.ui.header Pre-Booking
+          p
+            | Students can access their curriculums to E-Scooter, then apps can show their curriculums and help them pre-book the scooters.
+        #app_col13.column(data-aos='fade-down')
+          i.huge.grey.trophy.icon
+          h1.ui.header LeaderBoard
+          p Students can earn points by riding e-scooter  or completing tasks.
+      .three.column.padded.row
+        #app_col21.column(data-aos='fade-up')
+          i.huge.grey.map.marker.alternate.icon
+          h1.ui.header Scooter Location
+          p You can look for the idle scooter by the app so that you can save tour time.
+        #app_col22.column(data-aos='fade-up')
+          i.huge.grey.chart.bar.icon
+          h1.ui.header Statisitcal Forcasting
+          p
+            | By choosing the park-lot on the map, student can see the data of e-scooter usage on each hour.
+        #app_col23.column(data-aos='fade-up')
+          i.huge.grey.graduation.cap.icon
+          h1.ui.header Earn Free Time
+          p
+            | Through mission or effectiveness &amp; credibilty of using E-scooter, earn as many points to level up your character and boost ranking!
+  // page 3 end
+  // page 4 start
+  #section4.section
+    #app_demo1.ui.middle.aligned.two.column.grid
+      #app_demo1_row1.three.column.centered.row
+        #app_demo1_col1.column
+          #description1.ui.sizer.vertical.segment
+            .ui.grey.huge.header
+              i.massive.grey.user.circle.icon
+              | Avatar
+            p
+              | In E-Scooter, everyone can customize their intelligent virtual avatar. Users can not only decide avatars&apos; genders and colors but also dress them up, including choosing different customs and doing their hairstyles. Moreover, by upgrading and joining particular events, users can get special accessories.
+        #app_demo1_col2.column(data-aos='fade-left')
+          // <img  id ="demo1_img" src="./source/img/avatar.png">
+    .w3-container
+      .w3-border
+        .w3-grey(style='height:24px;width:17%')        
+    .ui.teal.progress
+      .label 17% Readed
+    // https://semantic-ui.com/modules/progress.html#/usage--check this for progress bar
+  // page 4 end
+  // page 5 start
+  #section5.section
+    #app_demo2.ui.middle.aligned.two.column.grid
+      #app_demo2_row1.three.column.centered.row
+        #app_demo2_col2.column(data-aos='fade-right')
+        #app_demo2_col1.column
+          #description2.ui.sizer.vertical.segment
+            .ui.grey.huge.header
+              i.massive.grey.calendar.alternate.icon
+              | Pre-Booking
+            p
+              | By accessing curriculums for E-Scooter, students can check their curriculums and decide between which two classes they need to use scooters, and then E-Scooter helps them pre-book the scooters. Furthermore, E-Scooter can display the number of scooters and parking spaces at the starting and ending stations.
+    .w3-container
+      .w3-border
+        .w3-grey(style='height:24px;width:34%')        
+    .ui.teal.progress
+      .label 34% Readed
+  // page 5 end
+  // page 6 start
+  #section6.section
+    #app_demo3.ui.middle.aligned.two.column.grid
+      #app_demo3_row1.three.column.centered.row
+        #app_demo3_col1.column
+          #description1.ui.sizer.vertical.segment
+            .ui.grey.huge.header
+              i.massive.grey.trophy.icon
+              | LeaderBoard
+            p
+              | By riding the e-scooter for a certain number of hours or by accomplishing tasks of varying difficulty, students can earn points. Further, prizes will be awarded to the top performers on the monthly leaderboards.
+        #app_demo3_col2.column(data-aos='fade-left')
+          // <img  id ="demo1_img" src="./source/img/avatar.png">
+    .w3-container
+      .w3-border
+        .w3-grey(style='height:24px;width:50%')        
+    .ui.teal.progress
+      .label 50% Readed
+  // page 6 end
+  // page 7 start
+  #section7.section
+    #app_demo4.ui.middle.aligned.two.column.grid
+      #app_demo4_row1.three.column.centered.row
+        #app_demo4_col2.column(data-aos='fade-right')
+        #app_demo4_col1.column
+          #description4.ui.sizer.vertical.segment
+            .ui.grey.huge.header
+              i.massive.grey.map.marker.alternate.icon
+              | Scooter Location
+            p
+              | Do you have the experience of going to the bike spot but there is no bike?Or sometimes you want to return the bike but the spot is full of bike.With e-scooter app, you won&apos;t have to look for the scooter any more. It will show you where the idle scooters are or the empty space.Making it more convenient to get the scooter.
+    .w3-container
+      .w3-border
+        .w3-grey(style='height:24px;width:67%')        
+    .ui.teal.progress
+      .label 67% Readed
+  // page 7 end
+  // page 8 start
+  #section8.section
+    #app_demo5.ui.middle.aligned.two.column.grid
+      #app_demo5_row1.three.column.centered.row
+        #app_demo5_col1.column
+          #description1.ui.sizer.vertical.segment
+            .ui.grey.huge.header
+              i.massive.grey.chart.bar.icon
+              | Statisitcal Forcasting
+            p
+              | This function is build for predicting the rush hours of the campus e-scooter system,
+              | with this function, student would know which time they less likely to found a e-scooter around them and student can use e-scooter system with more flexibility.
+        #app_demo5_col2.column(data-aos='fade-left')
+          // <img  id ="demo1_img" src="./source/img/avatar.png">
+    .w3-container
+      .w3-border
+        .w3-grey(style='height:24px;width:84%')        
+    .ui.teal.progress
+      .label 84% Readed
+  // page 8 end
+  // page 9 start
+  #section9.section
+    #app_demo6.ui.middle.aligned.two.column.grid
+      #app_demo6_row1.three.column.centered.row
+        #app_demo6_col2.column(data-aos='fade-right')
+        #app_demo6_col1.column
+          #description6.ui.sizer.vertical.segment
+            .ui.grey.huge.header
+              i.massive.grey.graduation.cap.icon
+              | Earn Bonus Time
+            p
+              | The higher ranking you are , the more bonus time for you.Through mission or effectiveness &amp; credibilty of using E-scooter, earn as many points to level up your character and boost ranking!
+    .w3-container
+      .w3-border
+        .w3-grey(style='height:24px;width:100%')        
+    .ui.teal.progress
+      .label 100% Readed
+  // page 9 end
+script(src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js')
+script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
+script(src='./source/js/about_us.js')
+//script(src='semantic/dist/semantic.min.js')
+//script(src='./source/js/type_writer.js')
